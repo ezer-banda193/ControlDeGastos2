@@ -32,6 +32,28 @@ public class ControlGastos extends AppCompatActivity {
         gastos = (Button)findViewById(R.id.buttonGastos);
         ingresos = (Button)findViewById(R.id.buttonIngresos);
 
+        // Agregar las pestañas---
+        Resources res = getResources();
+        TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
+        tabHost.setup();
+
+        TabHost.TabSpec spec1 = tabHost.newTabSpec("");
+        spec1.setContent(R.id.tab1);
+        spec1.setIndicator("GASTOS");
+
+        TabHost.TabSpec spec2 = tabHost.newTabSpec("");
+        spec2.setContent(R.id.tab2);
+        spec2.setIndicator("INGRESOS");
+
+        TabHost.TabSpec spec3 = tabHost.newTabSpec("");
+        spec3.setContent(R.id.tab3);
+        spec3.setIndicator("BALANCE");
+        //spec3.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));
+
+        tabHost.addTab(spec1);
+        tabHost.addTab(spec2);
+        tabHost.addTab(spec3);
+
         listaGastos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,array));
         listaIngresos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,array2));
         //listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -70,27 +92,7 @@ public class ControlGastos extends AppCompatActivity {
 
         // Importante: Esto va antes de instanciar controles dentro de cada pestaña
 
-        // Agregar las pestañas---
-        Resources res = getResources();
-        TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
-        tabHost.setup();
 
-        TabHost.TabSpec spec1 = tabHost.newTabSpec("");
-        spec1.setContent(R.id.tab1);
-        spec1.setIndicator("GASTOS");
-
-        TabHost.TabSpec spec2 = tabHost.newTabSpec("");
-        spec2.setContent(R.id.tab2);
-        spec2.setIndicator("INGRESOS");
-
-        TabHost.TabSpec spec3 = tabHost.newTabSpec("");
-        spec3.setContent(R.id.tab3);
-        spec3.setIndicator("BALANCE");
-        //spec3.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));
-
-        tabHost.addTab(spec1);
-        tabHost.addTab(spec2);
-        tabHost.addTab(spec3);
 
         // Otros Recursos (TextView, Buttons, ListView, EditText, etx)
     }

@@ -21,10 +21,10 @@ public class AgregarIngreso extends AppCompatActivity {
         this.setTitle("Agregar Ingreso");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        concepto = findViewById(R.id.editTextConcepto);
-        cantidad = findViewById(R.id.editTextCantidad);
-        fecha = findViewById(R.id.editTextFecha);
-        AgregarIngreso = findViewById(R.id.buttonAgregar);
+        concepto = findViewById(R.id.editTextConcepto1);
+        cantidad = findViewById(R.id.editTextCantidad1);
+        fecha = findViewById(R.id.editTextFecha1);
+        AgregarIngreso = findViewById(R.id.buttonAgregar1);
 
         AgregarIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
