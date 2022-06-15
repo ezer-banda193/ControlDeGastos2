@@ -54,9 +54,12 @@ public class ControlGastos extends AppCompatActivity {
         tabHost.addTab(spec2);
         tabHost.addTab(spec3);
 
-        listaGastos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,array));
-        listaIngresos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,array2));
+        //listaGastos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,array));
+        //listaIngresos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,array2));
+        listaGastos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,array));
+        listaIngresos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,array2));
         //listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        /*
         listaGastos.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         listaIngresos.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         listaGastos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -74,7 +77,7 @@ public class ControlGastos extends AppCompatActivity {
                 String Elemento = ((CheckedTextView) view).getText().toString();
                 Toast.makeText(getApplicationContext(),"Seleccionaste el "+ Elemento,Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         gastos.setOnClickListener(new View.OnClickListener(){
             @Override
